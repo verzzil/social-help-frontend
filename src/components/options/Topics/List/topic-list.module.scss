@@ -1,0 +1,13 @@
+.topics__list {
+  padding: 10px 0;
+  overflow: auto;
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 20px;
+  grid-template: 1fr / repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-columns: minmax(300px, 1fr);
+}
+
+.topics__list::-webkit-scrollbar {
+  display: none;
+}

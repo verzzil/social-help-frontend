@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import "./../../styles/index.scss";
+import "./sign-up-style.scss";
+
 const SignInForm = () => {
   const [signInForm, setSignInForm] = React.useState({
     email: null,
@@ -36,7 +39,7 @@ const SignInForm = () => {
     sendData("http://localhost:8080/sign_in", signInForm);
   };
   return (
-    <div className="wrapper__form">
+    <div className="wrapper">
       <div className="sign-up">
         <form onSubmit={sendForm} action="" class="sign-up__form form">
           <h1 className="form__title title">Welcome</h1>

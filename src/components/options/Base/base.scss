@@ -1,0 +1,66 @@
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.option {
+  padding: 30px 0 30px 0;
+  text-align: center;
+  background-color: #fff;
+  width: 390px;
+  border-radius: 5px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.option__title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #333;
+  line-height: 1.2;
+  text-align: center;
+  margin: 0 0 50px 0;
+}
+
+.option__links {
+}
+
+.option__link {
+    max-width: 40%;
+    margin: 0 auto 20px auto;
+    padding: 10px 5px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.option__link:last-child {
+    margin: 0 auto 0 auto;
+}
+
+.option__link_patient {
+    background-color: #98e38d;
+    transition: all 0.7s;
+}
+
+.option__link_patient:hover {
+    background-color: #bcedb4;
+}
+
+.option__link_patient a {
+    color: #fff;
+}
+
+.option__link_doctor {
+    border: 2px solid #333;
+    transition: all 0.7s;
+}
+
+.option__link_doctor:hover {
+    border: 2px solid #777;
+}
+
+.option__link_doctor a {
+    color: #333;
+}
