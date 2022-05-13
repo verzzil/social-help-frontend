@@ -1,0 +1,124 @@
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile {
+  flex: 1 0 auto;
+}
+
+.profile__section {
+  padding: 50px 0;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.profile__title {
+  font-size: 44px;
+  font-weight: bold;
+  margin: 0 0 30px 0;
+}
+
+.profile__subtitle {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0 0 70px 0;
+}
+
+.profile__content {
+  padding: 100px 50px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 14px rgba(0, 0, 0, 0.25);
+}
+
+.profile__header {
+  display: flex;
+  align-items: center;
+  margin: 0 0 80px 0;
+}
+
+.profile__img {
+  border-radius: 50%;
+  border: 1px solid #000;
+  width: 80px;
+  height: 80px;
+  margin: 0 30px 0 0;
+}
+
+.profile__name {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+}
+
+.profile__location {
+  font-size: 18px;
+  font-weight: regular;
+  color: #808080;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+.form__inputs {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+  row-gap: 50px;
+}
+
+.form__inputs input[type="text"],
+.form__inputs input[type="date"],
+.form__inputs input[type="number"] {
+  font-weight: bold;
+  font-size: 15px;
+  color: #555;
+  line-height: 1.2;
+  border-bottom: 2px solid #adadad;
+  width: 70%;
+  padding: 10px;
+  transition: 0.7s;
+}
+
+.form__inputs input[type="text"]:focus,
+.form__inputs input[type="date"]:focus,
+.form__inputs input[type="number"]:focus {
+  border-bottom: 2px solid #98e38d;
+}
+
+.form__avatar {
+  justify-self: center;
+}
+
+.form__frame {
+  padding: 20px 10px;
+  background-color: #efedf7;
+  border-radius: 5px;
+  margin: 0 0 30px 0;
+}
+
+.form__img {
+  background-color: #fff;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+
+.file {
+    
+}
+
+.form__rating {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  background: url("./../../../../public/images/icons/star.png") 85% 50%/12px
+    12px no-repeat;
+}

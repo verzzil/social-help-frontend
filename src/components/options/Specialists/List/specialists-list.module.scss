@@ -1,0 +1,8 @@
+.specialists__list {
+  padding: 10px 0;
+  display: grid;
+  grid-template: 1fr / repeat(auto-fill, minmax(400px, 1fr));
+  justify-content: space-between;
+  grid-gap: 30px;
+  margin: 0 0 50px 0;
+}

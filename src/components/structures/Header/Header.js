@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
 import "./../../../styles/index.scss";
 import styles from "./header.module.scss";
@@ -40,13 +40,13 @@ const Header = () => {
             </ul>
           </nav>
           <div className="profile">
-            <a className="profile__link" href="#">
+            <Link className="profile__link" to='/profile'>
               <img
                 className={styles.profile__img}
                 src="./images/icons/profile.png"
                 alt=""
               />
-            </a>
+            </Link>
           </div>
         </div>
       </div>
