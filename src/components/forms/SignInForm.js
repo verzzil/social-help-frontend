@@ -7,7 +7,7 @@ import "./sign-up-style.scss";
 const SignInForm = ({ changeConfirmed }) => {
   const [signInForm, setSignInForm] = React.useState({
     email: null,
-    password: null,
+    hashPassword: null,
   });
 
   const changeForm = (event) => {
@@ -58,8 +58,8 @@ const SignInForm = ({ changeConfirmed }) => {
             <input
               type="password"
               placeholder="Password"
-              name="password"
-              value={signInForm.password}
+              name="hashPassword"
+              value={signInForm.hashPassword}
               onChange={changeForm}
             />
           </div>

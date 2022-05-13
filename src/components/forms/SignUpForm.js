@@ -19,7 +19,7 @@ const SignUpForm = ({ changeValidate }) => {
     specialization: null,
     age: null,
     email: null,
-    password: null,
+    hashPassword: null,
   });
   const [patient, setPatient] = React.useState(false);
   const [doctor, setDoctor] = React.useState(false);
@@ -200,8 +200,8 @@ const SignUpForm = ({ changeValidate }) => {
               <input
                 type="password"
                 placeholder="Password"
-                name="password"
-                value={signUpForm.password}
+                name="hashPassword"
+                value={signUpForm.hashPassword}
                 onChange={changeForm}
               />
             </div>
