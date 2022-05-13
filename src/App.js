@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 import SignUpForm from "./components/forms/SignUpForm";
 import SignInForm from "./components/forms/SignInForm";
@@ -9,15 +9,44 @@ import Layout from "./components/layout/Layout";
 import Profile from "./components/pages/Profile/Profile";
 
 const App = () => {
+  const [validate, setValidate] = React.useState(false);
+  const [confirmed, setConfirmed] = React.useState(false);
+
+  const changeValidate = () => {
+    setValidate((prev) => !prev);
+  };
+
+  const changeConfirmed = () => {
+    setConfirmed((prev) => !prev);
+  };
+
   return (
     <Routes>
-      <Route path="/sign_up" element={<SignUpForm />} />
-      <Route path="/sign_in" element={<SignInForm />} />
+      <Route
+        path="/sign_up"
+        element={
+          validate ? (
+            <Navigate to="/sign_in" replace />
+          ) : (
+            <SignUpForm changeValidate={changeValidate} />
+          )
+        }
+      />
+      <Route
+        path="/sign_in"
+        element={
+          confirmed ? (
+            <Navigate to="/" replace />
+          ) : (
+            <SignInForm changeConfirmed={changeConfirmed} />
+          )
+        }
+      />
       <Route path="/" element={<Layout />}>
         <Route index element={<MainPage />} />
         <Route path="/profile" element={<Profile />} />
       </Route>
-      <Route path="/base" element={<Base />} />
+      {/* <Route path="/base" element={<Base />} /> */}
     </Routes>
   );
 };

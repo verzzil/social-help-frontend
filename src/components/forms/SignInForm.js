@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./../../styles/index.scss";
 import "./sign-up-style.scss";
 
-const SignInForm = () => {
+const SignInForm = ({ changeConfirmed }) => {
   const [signInForm, setSignInForm] = React.useState({
     email: null,
     password: null,
@@ -36,8 +36,10 @@ const SignInForm = () => {
 
   const sendForm = (event) => {
     event.preventDefault();
-    sendData("http://localhost:8080/sign_in", signInForm);
+    sendData("http://localhost/authentication/login", signInForm);
+    changeConfirmed();
   };
+
   return (
     <div className="wrapper">
       <div className="sign-up">
