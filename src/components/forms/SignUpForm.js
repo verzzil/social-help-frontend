@@ -286,8 +286,8 @@ const SignUpForm = ({ changeValidate }) => {
               <input
                 type="password"
                 placeholder="Password"
-                name="password"
-                value={signUpForm.password}
+                name="hashPassword"
+                value={signUpForm.hashPassword}
                 onChange={changeForm}
               />
             </div>
