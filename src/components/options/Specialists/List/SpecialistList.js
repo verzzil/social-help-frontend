@@ -8,8 +8,10 @@ const SpecialistList = ({ specialists }) => {
       {specialists.map((specialist) => {
         return (
           <SpecialistItem
-            name={specialist.name}
-            description={specialist.description}
+            name={specialist.specialization}
+            firstname={specialist.firstName}
+            lastname={specialist.lastName}
+            // description={specialist.description}
           />
         );
       })}

@@ -14,19 +14,19 @@ const Main = () => {
       await fetch("http://localhost/authentication/allProblem")
         .then((res) => res.json())
         .then((result) => {
-          setTopics([result]);
+          setTopics(result);
         });
     };
     const getSpecialists = async () => {
       await fetch("http://localhost/authentication/problem/allSpecialist")
         .then((res) => res.json())
         .then((result) => {
-          setSpecialists([result]);
+          setSpecialists(result);
         });
     };
     getTopics();
     getSpecialists();
-  });
+  }, []);
 
   return (
     <main className={styles.main}>

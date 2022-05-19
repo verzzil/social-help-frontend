@@ -1,12 +1,12 @@
 import styles from "./specialist-item.module.scss";
 
-const SpecialistItem = ({ name, description }) => {
+const SpecialistItem = ({ name, firstname, lastname }) => {
   return (
     <li className={styles.specialists__item}>
       <div className={styles.specialists__card}>
         <div className={styles.specialists__description}>
           <h2 className={styles.specialization}>{name}</h2>
-          <p className={styles.description}>{description}</p>
+          <p className={styles.description}>{firstname} {lastname}</p>
           <a href="#" className={styles.chatLink}>
             <span className={styles.chatLink__content}>Choose</span>
           </a>

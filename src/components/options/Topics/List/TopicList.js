@@ -6,7 +6,7 @@ const TopicList = ({ topics }) => {
   return (
     <ul className={styles.topics__list}>
       {topics.map((topic) => {
-        return <TopicItem name={topic.name} />;
+        return <TopicItem name={topic.problemDescription} />;
       })}
     </ul>
   );
