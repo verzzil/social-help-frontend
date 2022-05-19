@@ -7,6 +7,9 @@ import MainPage from "./components/pages/Main/MainPage";
 import Base from "./components/options/Base/Base";
 import Layout from "./components/layout/Layout";
 import Profile from "./components/pages/Profile/Profile";
+import Timetable from "./components/pages/Chats/Chats";
+import Chats from "./components/pages/Chats/Chats";
+import Favorites from "./components/pages/Favorites/Favorites";
 
 const App = () => {
   const [validate, setValidate] = React.useState(false);
@@ -45,6 +48,9 @@ const App = () => {
       <Route path="/" element={<Layout />}>
         <Route index element={<MainPage />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/time-table" element={<Timetable />} />
+        <Route path="/favorites" element={<Favorites />} />
+        <Route path="/chats" element={<Chats />} />
       </Route>
       {/* <Route path="/base" element={<Base />} /> */}
     </Routes>

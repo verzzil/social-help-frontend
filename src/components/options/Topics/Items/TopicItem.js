@@ -1,6 +1,6 @@
 import styles from "./topic-item.module.scss";
 
-const TopicItem = () => {
+const TopicItem = ({name}) => {
   return (
     <li className={styles.item}>
       <a className="item__link" href="#">
@@ -11,7 +11,7 @@ const TopicItem = () => {
             alt=""
           />
         </div>
-        <p className={styles.item__name}>Throat Pain</p>
+        <p className={styles.item__name}>{name}</p>
       </a>
     </li>
   );

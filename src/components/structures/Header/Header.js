@@ -9,38 +9,40 @@ const Header = () => {
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.logo}>
-            <img
-              className={styles.logo__img}
-              src="./images/icons/logo.png"
-              alt=""
-            />
+            <Link to="/">
+              <img
+                className={styles.logo__img}
+                src="./images/icons/logo.png"
+                alt=""
+              />
+            </Link>
           </div>
           <nav className="navigation">
             <ul className={styles.navigation__list}>
               <li className={styles.navigation__item}>
-                <a className={styles.navigation__link} href="#">
+                <Link className={styles.navigation__link} to="/">
                   Main
-                </a>
+                </Link>
               </li>
               <li className={styles.navigation__item}>
-                <a className={styles.navigation__link} href="#">
+                <Link className={styles.navigation__link} to="/time-table">
                   Timetable
-                </a>
+                </Link>
               </li>
               <li className={styles.navigation__item}>
-                <a className={styles.navigation__link} href="#">
+                <Link className={styles.navigation__link} to="/favorites">
                   Favorites
-                </a>
+                </Link>
               </li>
               <li className={styles.navigation__item}>
-                <a className={styles.navigation__link} href="#">
+                <Link className={styles.navigation__link} to="/chats">
                   Chats
-                </a>
+                </Link>
               </li>
             </ul>
           </nav>
           <div className="profile">
-            <Link className="profile__link" to='/profile'>
+            <Link className="profile__link" to="/profile">
               <img
                 className={styles.profile__img}
                 src="./images/icons/profile.png"

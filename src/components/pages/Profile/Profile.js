@@ -1,6 +1,29 @@
+import { useEffect, useState } from "react";
+
 import styles from "./profile.module.scss";
 
 const Profile = () => {
+  const [profile, setProfile] = useState(null);
+
+  useEffect(() => {
+    const getData = async () => {
+      await fetch("http://localhost:57606/allProblem")
+        .then((res) => res.json())
+        .then((result) => {
+          setProfile([result]);
+        });
+    };
+    getData();
+  });
+
+  const changeForm = (event) => {
+    const { value, name } = event.target;
+    setProfile((prevForm) => ({
+      ...prevForm,
+      [name]: value,
+    }));
+  };
+
   return (
     <div className={styles.wrapper}>
       <main className={styles.profile}>
@@ -18,18 +41,45 @@ const Profile = () => {
               </div> */}
               <form className={styles.form}>
                 <div className={styles.form__inputs}>
-                  <input type="text" name="firstName" placeholder="Firstname" />
-                  <input type="text" name="lastName" placeholder="Lastname" />
+                  <input
+                    type="text"
+                    name="firstName"
+                    placeholder="Firstname"
+                    value={profile.firstName}
+                    onBlur={changeForm}
+                    onChange={changeForm}
+                  />
+                  <input
+                    type="text"
+                    name="lastName"
+                    placeholder="Lastname"
+                    value={profile.lastName}
+                    onBlur={changeForm}
+                    onChange={changeForm}
+                  />
                   <input
                     type="text"
                     name="patronymic"
                     placeholder="Patronymic"
+                    value={profile.patronymic}
+                    onBlur={changeForm}
+                    onChange={changeForm}
                   />
-                  <input type="text" name="city" placeholder="City" />
+                  <input
+                    type="text"
+                    name="city"
+                    placeholder="City"
+                    value={profile.city}
+                    onBlur={changeForm}
+                    onChange={changeForm}
+                  />
                   <input
                     type="date"
                     name="birthday"
                     placeholder="Date of Birth"
+                    value={profile.birthday}
+                    onBlur={changeForm}
+                    onChange={changeForm}
                   />
                   <input type="number" name="age" placeholder="Age" />
                 </div>
