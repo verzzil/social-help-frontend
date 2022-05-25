@@ -10,6 +10,8 @@ import Profile from "./components/pages/Profile/Profile";
 import Timetable from "./components/pages/Chats/Chats";
 import Chats from "./components/pages/Chats/Chats";
 import Favorites from "./components/pages/Favorites/Favorites";
+import DoctorsPage from "./components/pages/Doctors/DoctorsPage";
+import AssignPage from "./components/structures/assign/AssignPage";
 
 const App = () => {
   const [validate, setValidate] = React.useState(false);
@@ -51,6 +53,8 @@ const App = () => {
         <Route path="/time-table" element={<Timetable />} />
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/chats" element={<Chats />} />
+        <Route path="/:spec" element={<DoctorsPage />}/>
+        <Route path="/assign" element={<AssignPage />}/>
       </Route>
       {/* <Route path="/base" element={<Base />} /> */}
     </Routes>
