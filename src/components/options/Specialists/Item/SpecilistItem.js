@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./specialist-item.module.scss";
 
 const SpecialistItem = ({ name, description }) => {
@@ -7,9 +8,9 @@ const SpecialistItem = ({ name, description }) => {
         <div className={styles.specialists__description}>
           <h2 className={styles.specialization}>{name}</h2>
           <p className={styles.description}>{description}</p>
-          <a href="#" className={styles.chatLink}>
+          <Link to={`/${name}`} className={styles.chatLink}>
             <span className={styles.chatLink__content}>Choose</span>
-          </a>
+          </Link>
         </div>
         <div className={styles.specialists__img}>
           <img
