@@ -2,19 +2,19 @@ import styles from "./specialists-list.module.scss";
 
 import SpecialistItem from "../Item/SpecilistItem";
 
-const SpecialistList = ({ specialists }) => {
+const SpecialistList = ({ specializations }) => {
   return (
     <ul className={styles.specialists__list}>
-      {specialists.map((specialist) => {
+      {specializations.map((specialization) => {
         return (
           <SpecialistItem
-            name={specialist.specialization}
-            firstname={specialist.firstName}
-            lastname={specialist.lastName}
-<<<<<<< HEAD
+          id={specialization.id}
+          key={specialization.id}
+          specialization={specialization.specialization}
+            // name={specialist.specialization}
+            // firstname={specialist.firstName}
+            // lastname={specialist.lastName}
             // description={specialist.description}
-=======
->>>>>>> 947a7ed0aaee3bb526d29ef8249e0bde3c1465da
           />
         );
       })}

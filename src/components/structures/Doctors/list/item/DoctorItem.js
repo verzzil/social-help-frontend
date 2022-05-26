@@ -3,7 +3,7 @@ import styles from "./styles/item.module.scss";
 
 import Modal from "../../../Modal/Modal";
 
-const DoctorItem = () => {
+const DoctorItem = ({firstname, lastname, city, experience}) => {
   const [modal, setModal] = useState(false);
 
   const changeModal = () => {
@@ -22,8 +22,9 @@ const DoctorItem = () => {
             />
           </div>
           <div className="item__info">
-            <p className={styles.name}>Vasya pupkin</p>
-            <p className="experience">Experience - 5 years</p>
+            <p className={styles.name}>{firstname} {lastname}</p>
+            <p className={styles.name}>{city}</p>
+            <p className="experience">Experience - {experience} years</p>
           </div>
         </div>
       </li>
