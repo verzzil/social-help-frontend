@@ -7,15 +7,26 @@ import MainPage from "./components/pages/Main/MainPage";
 import Base from "./components/options/Base/Base";
 import Layout from "./components/layout/Layout";
 import Profile from "./components/pages/Profile/Profile";
-import Timetable from "./components/pages/Chats/Chats";
+import UserProfile from "./components/pages/UserProfile/UserProfile";
+import Timetable from "./components/pages/TimeTable/Timetable";
 import Chats from "./components/pages/Chats/Chats";
 import Favorites from "./components/pages/Favorites/Favorites";
 import DoctorsPage from "./components/pages/Doctors/DoctorsPage";
 import AssignPage from "./components/structures/assign/AssignPage";
+import EditPage from "./components/pages/Profile/EditPage";
 
 const App = () => {
   const [validate, setValidate] = React.useState(false);
   const [confirmed, setConfirmed] = React.useState(false);
+  const [edited, setEdited] = React.useState(false);
+  const [assigned, setAssigned] = React.useState(false);
+  const [token, setToken] = React.useState(
+    JSON.parse(localStorage.getItem("token"))
+  );
+
+  const addToken = (response) => {
+    setToken(response);
+  };
 
   const changeValidate = () => {
     setValidate((prev) => !prev);
@@ -23,6 +34,22 @@ const App = () => {
 
   const changeConfirmed = () => {
     setConfirmed((prev) => !prev);
+  };
+
+  const changeEdited = () => {
+    setEdited((prev) => !prev);
+  };
+
+  const falseEdited = () => {
+    setEdited(false);
+  };
+
+  const changeAssigned = () => {
+    setAssigned((prev) => !prev);
+  };
+
+  const falseAssigned = () => {
+    setAssigned(false);
   };
 
   return (
@@ -43,18 +70,70 @@ const App = () => {
           confirmed ? (
             <Navigate to="/" replace />
           ) : (
-            <SignInForm changeConfirmed={changeConfirmed} />
+            <SignInForm addToken={addToken} changeConfirmed={changeConfirmed} />
           )
         }
       />
       <Route path="/" element={<Layout />}>
-        <Route index element={<MainPage />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/time-table" element={<Timetable />} />
+        <Route
+          index
+          element={
+            token === null ? (
+              <Navigate to="/sign_in" replace />
+            ) : (
+              <MainPage token={token} />
+            )
+          }
+        />
+        <Route
+          path="/profile"
+          element={
+            <Profile
+              accessToken={token?.accessToken}
+              falseEdited={falseEdited}
+            />
+          }
+        />
+        <Route
+          path="/profile/:id"
+          element={
+            assigned ? (
+              <Navigate to="/" replace />
+            ) : (
+              <UserProfile changeAssigned={changeAssigned} accessToken={token.accessToken} />
+            )
+          }
+        />
+        <Route path="/timetable" element={<Timetable accessToken={token.accessToken} />} />
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/chats" element={<Chats />} />
-        <Route path="/doctors/:id" element={<DoctorsPage />}/>
-        <Route path="/assign" element={<AssignPage />}/>
+        <Route path="/doctors/:id" element={<DoctorsPage />} />
+        <Route
+          path="/assign"
+          element={
+            assigned ? (
+              <Navigate to="/" replace />
+            ) : (
+              <AssignPage
+                changeAssigned={changeAssigned}
+                falseAssigned={falseAssigned}
+              />
+            )
+          }
+        />
+        <Route
+          path="/edit"
+          element={
+            edited ? (
+              <Navigate to="/profile" replace />
+            ) : (
+              <EditPage
+                accessToken={token.accessToken}
+                changeEdited={changeEdited}
+              />
+            )
+          }
+        />
       </Route>
       {/* <Route path="/base" element={<Base />} /> */}
     </Routes>

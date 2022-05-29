@@ -8,13 +8,13 @@ const Base = () => {
     return(
         <div className="wrapper">
             <div className="option">
-                <h1 className="option__title">Who you are?</h1>
+                <h1 className="option__title">Кто вы?</h1>
                 <div className="option__links">
                     <div className="option__link option__link_patient">
-                        <Link to="/sign_up">Patient</Link>
+                        <Link to="/sign_up">Пациент</Link>
                     </div>
                     <div className="option__link option__link_doctor">
-                        <Link to="/sign_up">Doctor</Link>
+                        <Link to="/sign_up">Врач</Link>
                     </div>
                 </div>
             </div>

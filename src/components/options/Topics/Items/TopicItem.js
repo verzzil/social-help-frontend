@@ -1,6 +1,6 @@
 import styles from "./topic-item.module.scss";
 
-const TopicItem = ({ name, getSpecialists, id }) => {
+const TopicItem = ({ name, getSpecialists, id, photoUrl }) => {
   return (
     <li onClick={() => getSpecialists(id)} className={styles.item}>
       <div className={styles.item__imgContainer}>

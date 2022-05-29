@@ -1,0 +1,36 @@
+.card {
+  background-color: #98e38d;
+  padding: 20px 10px;
+  border-radius: 5px;
+}
+
+.card__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.name {
+  font-size: 32px;
+  font-weight: bold;
+  color: #fff;
+  margin: 0 0 10px 0;
+}
+
+.description {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  color: #fff;
+}
+
+.time {
+    text-align: right;
+}
+
+.time__actual {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  color: #fff;
+  margin: 0 0 10px 0;
+}

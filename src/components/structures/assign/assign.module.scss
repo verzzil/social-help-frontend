@@ -3,7 +3,7 @@
 }
 
 .topics {
-  padding: 50px 5px 0 5px;
+  padding: 50px 5px;
   min-height: 100vh;
 }
 
@@ -43,6 +43,7 @@
     padding: 10px 5px;
     background: none;
     border-bottom: 2px solid #98e38d;
+    margin: 0 0 50px 0;
 }
 
 button {
@@ -51,4 +52,16 @@ button {
     padding: 10px 5px;
     border-radius: 5px;
     min-width: 100px;
+}
+
+textarea {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.2;
+  border-bottom: 2px solid #adadad;
+  width: 40%;
+  height: 200px;
+  padding: 10px 5px;
+  transition: 0.7s;
+  margin: 0 0 50px 0;
 }

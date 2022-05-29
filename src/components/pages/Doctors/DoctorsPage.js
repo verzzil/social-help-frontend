@@ -11,7 +11,7 @@ const DoctorPage = () => {
   console.log(id)
   useEffect(() => {
     const getSpecialists = async () => {
-      await fetch(`http://localhost/authentication/specialization/${id}`)
+      await fetch(`https://2e00-178-213-240-41.eu.ngrok.io/specialization/${id}`)
         .then((res) => res.json())
         .then((result) => {
           setDoctors([result]);

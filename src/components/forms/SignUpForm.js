@@ -67,7 +67,7 @@ const SignUpForm = ({ changeValidate }) => {
 
   const sendForm = (event) => {
     event.preventDefault();
-    sendData("http://localhost/authentication/sign_up", signUpForm);
+    sendData("https://2e00-178-213-240-41.eu.ngrok.io/sign_up", signUpForm);
     changeValidate();
   };
 
@@ -75,13 +75,13 @@ const SignUpForm = ({ changeValidate }) => {
     <div className="wrapper">
       {!patient && !doctor && (
         <div className="option">
-          <h1 className="option__title">Who you are?</h1>
+          <h1 className="option__title">Кто вы?</h1>
           <div className="option__links">
             <div className="option__link option__link_patient">
-              <button onClick={changePatient}>Patient</button>
+              <button onClick={changePatient}>Пациент</button>
             </div>
             <div className="option__link option__link_doctor">
-              <button onClick={changeDoctor}>Doctor</button>
+              <button onClick={changeDoctor}>Врач</button>
             </div>
           </div>
         </div>
@@ -90,11 +90,11 @@ const SignUpForm = ({ changeValidate }) => {
       {doctor && (
         <div className="sign-up">
           <form onSubmit={sendForm} action="" className="sign-up__form form">
-            <h1 className="form__title title">Welcome</h1>
+            <h1 className="form__title title">Добро пожаловать!</h1>
             <div className="form__input">
               <input
                 type="text"
-                placeholder="Firstname"
+                placeholder="Имя"
                 name="firstName"
                 value={signUpForm.firstName}
                 onChange={changeForm}
@@ -103,7 +103,7 @@ const SignUpForm = ({ changeValidate }) => {
             <div className="form__input">
               <input
                 type="text"
-                placeholder="Lastname"
+                placeholder="Фамилия"
                 name="lastName"
                 value={signUpForm.lastName}
                 onChange={changeForm}
@@ -112,7 +112,7 @@ const SignUpForm = ({ changeValidate }) => {
             <div className="form__input">
               <input
                 type="text"
-                placeholder="Patronymic"
+                placeholder="Отчество"
                 name="patronymic"
                 value={signUpForm.patronymic}
                 onChange={changeForm}
@@ -121,7 +121,7 @@ const SignUpForm = ({ changeValidate }) => {
             <div className="form__input">
               <input
                 type="date"
-                placeholder="Birthday"
+                placeholder="Дата рождения"
                 name="birthday"
                 value={signUpForm.birthday}
                 onChange={changeForm}
@@ -130,7 +130,7 @@ const SignUpForm = ({ changeValidate }) => {
             <div className="form__input">
               <input
                 type="text"
-                placeholder="City"
+                placeholder="Город"
                 name="city"
                 value={signUpForm.city}
                 onChange={changeForm}
@@ -139,7 +139,7 @@ const SignUpForm = ({ changeValidate }) => {
             <div className="form__input">
               <input
                 type="text"
-                placeholder="Gender"
+                placeholder="Пол"
                 name="gender"
                 value={signUpForm.gender}
                 onChange={changeForm}
@@ -147,7 +147,7 @@ const SignUpForm = ({ changeValidate }) => {
             </div>
             <div className="form__input">
               <textarea
-                placeholder="Qualification"
+                placeholder="Квалификация"
                 name="qualification"
                 value={signUpForm.qualification}
                 onChange={changeForm}
@@ -155,7 +155,7 @@ const SignUpForm = ({ changeValidate }) => {
             </div>
             <div className="form__input">
               <textarea
-                placeholder="Education"
+                placeholder="Образование"
                 name="education"
                 value={signUpForm.education}
                 onChange={changeForm}
@@ -163,7 +163,7 @@ const SignUpForm = ({ changeValidate }) => {
             </div>
             <div className="form__input">
               <textarea
-                placeholder="Qualification improvement"
+                placeholder="Повышение квалификации"
                 name="qualification_improvement"
                 value={signUpForm.qualification_improvement}
                 onChange={changeForm}
@@ -172,7 +172,7 @@ const SignUpForm = ({ changeValidate }) => {
             <div className="form__input">
               <input
                 type="number"
-                placeholder="Experience"
+                placeholder="Опыт работы"
                 name="experience"
                 value={signUpForm.experience}
                 onChange={changeForm}
@@ -181,7 +181,7 @@ const SignUpForm = ({ changeValidate }) => {
             <div className="form__input">
               <input
                 type="text"
-                placeholder="Specialization"
+                placeholder="Специализация"
                 name="specialization"
                 value={signUpForm.specialization}
                 onChange={changeForm}
@@ -199,18 +199,18 @@ const SignUpForm = ({ changeValidate }) => {
             <div className="form__input">
               <input
                 type="password"
-                placeholder="Password"
+                placeholder="Пароль"
                 name="hashPassword"
                 value={signUpForm.hashPassword}
                 onChange={changeForm}
               />
             </div>
             <div className="form__input">
-              <button type="submit">Sign up</button>
+              <button type="submit">Зарегистрироваться</button>
             </div>
           </form>
           <p className="sign-up__hint">
-            Have an Account? <Link to="/sign_in">Sign In</Link>
+            Есть аккаунт? <Link to="/sign_in">Войти</Link>
           </p>
         </div>
       )}
@@ -218,11 +218,11 @@ const SignUpForm = ({ changeValidate }) => {
       {patient && (
         <div className="sign-up">
           <form onSubmit={sendForm} action="" className="sign-up__form form">
-            <h1 className="form__title title">Welcome</h1>
+            <h1 className="form__title title">Добро пожаловать</h1>
             <div className="form__input">
               <input
                 type="text"
-                placeholder="Firstname"
+                placeholder="Имя"
                 name="firstName"
                 value={signUpForm.firstName}
                 onChange={changeForm}
@@ -231,7 +231,7 @@ const SignUpForm = ({ changeValidate }) => {
             <div className="form__input">
               <input
                 type="text"
-                placeholder="Lastname"
+                placeholder="Фамилия"
                 name="lastName"
                 value={signUpForm.lastName}
                 onChange={changeForm}
@@ -240,7 +240,7 @@ const SignUpForm = ({ changeValidate }) => {
             <div className="form__input">
               <input
                 type="text"
-                placeholder="Patronymic"
+                placeholder="Отчество"
                 name="patronymic"
                 value={signUpForm.patronymic}
                 onChange={changeForm}
@@ -249,7 +249,7 @@ const SignUpForm = ({ changeValidate }) => {
             <div className="form__input">
               <input
                 type="date"
-                placeholder="Birthday"
+                placeholder="Дата рождения"
                 name="birthday"
                 value={signUpForm.birthday}
                 onChange={changeForm}
@@ -258,7 +258,7 @@ const SignUpForm = ({ changeValidate }) => {
             <div className="form__input">
               <input
                 type="text"
-                placeholder="City"
+                placeholder="Город"
                 name="city"
                 value={signUpForm.city}
                 onChange={changeForm}
@@ -267,7 +267,7 @@ const SignUpForm = ({ changeValidate }) => {
             <div className="form__input">
               <input
                 type="text"
-                placeholder="Gender"
+                placeholder="Пол"
                 name="gender"
                 value={signUpForm.gender}
                 onChange={changeForm}
@@ -285,18 +285,18 @@ const SignUpForm = ({ changeValidate }) => {
             <div className="form__input">
               <input
                 type="password"
-                placeholder="Password"
+                placeholder="Пароль"
                 name="hashPassword"
                 value={signUpForm.hashPassword}
                 onChange={changeForm}
               />
             </div>
             <div className="form__input">
-              <button type="submit">Sign up</button>
+              <button type="submit">Зарегистрироваться</button>
             </div>
           </form>
           <p className="sign-up__hint">
-            Have an Account? <Link to="/sign_in">Sign In</Link>
+            Есть аккаунт? <Link to="/sign_in">Войти</Link>
           </p>
         </div>
       )}

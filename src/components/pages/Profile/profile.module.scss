@@ -9,6 +9,8 @@
 }
 
 .profile__section {
+  display: flex;
+  justify-content: center;
   padding: 50px 0;
 }
 
@@ -109,10 +111,12 @@
   border-radius: 50%;
   width: 200px;
   height: 200px;
+  display: flex;
+  justify-content: center;
 }
 
 .file {
-    
+  text-align: center;
 }
 
 .form__rating {
@@ -121,4 +125,47 @@
   text-align: center;
   background: url("./../../../../public/images/icons/star.png") 85% 50%/12px
     12px no-repeat;
+}
+
+.chat {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #98e38d;
+  border-radius: 5px;
+  padding: 10px 10px;
+  width: 150px;
+  margin: 0 auto;
+  text-align: center;
+  &__link {
+    color: #fff;
+  }
+}
+
+.edit {
+  margin: 50px auto;
+  padding: 70px 0 30px 0;
+  text-align: center;
+  background-color: #fff;
+  width: 50%;
+  border-radius: 5px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.info__description {
+  margin: 0 50px;
+}
+
+.name {
+  font-size: 44px;
+  font-weight: bold;
+  margin: 0 0 20px 0;
+}
+
+.specialization {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0 0 20px 0;
+  color: #514f4f;
 }

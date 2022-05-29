@@ -9,7 +9,7 @@ const SpecialistItem = ({ specialization, id }) => {
             <h2 className={styles.specialization}>{specialization}</h2>
             {/* <p className={styles.description}>{description}</p> */}
             <Link to={`/doctors/${id}`} className={styles.chatLink}>
-              <span className={styles.chatLink__content}>Choose</span>
+              <span className={styles.chatLink__content}>Выбрать</span>
             </Link>
           </div>
           <div className={styles.specialists__img}>

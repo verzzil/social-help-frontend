@@ -21,22 +21,22 @@ const Header = () => {
             <ul className={styles.navigation__list}>
               <li className={styles.navigation__item}>
                 <Link className={styles.navigation__link} to="/">
-                  Main
+                  Главная
                 </Link>
               </li>
               <li className={styles.navigation__item}>
-                <Link className={styles.navigation__link} to="/time-table">
-                  Timetable
+                <Link className={styles.navigation__link} to="/timetable">
+                  Расписание
                 </Link>
               </li>
               <li className={styles.navigation__item}>
                 <Link className={styles.navigation__link} to="/favorites">
-                  Favorites
+                  Избранное
                 </Link>
               </li>
               <li className={styles.navigation__item}>
                 <Link className={styles.navigation__link} to="/chats">
-                  Chats
+                  Чат
                 </Link>
               </li>
             </ul>

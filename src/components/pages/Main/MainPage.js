@@ -5,11 +5,10 @@ import styles from "./main-page.module.scss";
 
 import Main from "../../structures/Main/Main";
 
-const MainPage = () => {
-
+const MainPage = ({ token }) => {
   return (
     <div className={styles.wrapper}>
-      <Main />
+      <Main token={token} />
     </div>
   );
 };

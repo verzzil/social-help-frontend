@@ -1,0 +1,67 @@
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile {
+  flex: 1 0 auto;
+}
+
+.profile__section {
+  padding: 50px 0;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  margin: 0 0 50px 0;
+  &__img {
+    margin: 0 50px 0 0;
+    img {
+      height: 300px;
+      width: 300px;
+      border-radius: 50%;
+    }
+  }
+}
+
+.name {
+  font-size: 44px;
+  font-weight: bold;
+  margin: 0 0 20px 0;
+}
+
+.specialization {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0 0 20px 0;
+  color: #514f4f;
+}
+
+.qualification {
+  margin: 0 0 50px 0;
+}
+
+.qualification__title {
+  font-size: 44px;
+  font-weight: bold;
+  margin: 0 0 20px 0;
+}
+
+.chat {
+  // background-color: #98e38d;
+  border-radius: 5px;
+  padding: 10px 5px;
+  width: 100px;
+  margin: 0 auto;
+  text-align: center;
+  &__link {
+    color: #fff;
+  }
+}

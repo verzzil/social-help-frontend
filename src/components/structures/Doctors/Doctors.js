@@ -9,8 +9,8 @@ const Doctors = ({doctors}) => {
     <main className={styles.main}>
       <section className={styles.topics}>
         <div className={styles.container}>
-          <h1 className={styles.topics__title}>Choose a specialist</h1>
-          <DoctorsList specialists={doctors} />
+          <h1 className={styles.topics__title}>Выберите специалиста</h1>
+          {doctors && <DoctorsList specialists={doctors} />}
         </div>
       </section>
     </main>
